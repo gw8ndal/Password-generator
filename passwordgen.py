@@ -13,15 +13,4 @@ def generator():
 		f.write('{}\n'.format(motdepasse))
 	print('Saved into passwords.txt')
 
-def recommencer():
-	restart = input('Restart ? (This will erase passwords.txt) [O/n] - ')
-	if 'O' in restart or 'o' in restart:
-		generator()
-	elif 'N' in restart or 'n' in restart:
-		print('Leaving...')
-	else:
-		print('Invalid answer')
-		recommencer()
-
 generator()
-recommencer()
